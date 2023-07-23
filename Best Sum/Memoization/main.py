@@ -1,21 +1,28 @@
 from time import time
 
 
-def bestSum(targetSum: int, numbers: list[int], memo: dict = {}) -> list[int | None] | None:
-    key = (targetSum, ','.join([str(number) for number in numbers]))
-    if key in memo.keys(): return memo.get(key)
-    if targetSum == 0: return []
-    if targetSum < 0: return None
-    
+def bestSum(
+    targetSum: int, numbers: list[int], memo: dict = {}
+) -> list[int | None] | None:
+    key = (targetSum, ",".join([str(number) for number in numbers]))
+    if key in memo.keys():
+        return memo.get(key)
+    if targetSum == 0:
+        return []
+    if targetSum < 0:
+        return None
+
     shortestCombination = None
 
     for number in numbers:
         remainder = targetSum - number
         remainderResult = bestSum(remainder, numbers)
         if type(remainderResult) == list:
-            combination =  [*remainderResult, number]
+            combination = [*remainderResult, number]
 
-            if (shortestCombination == None) or (len(combination) < len(shortestCombination)):
+            if (shortestCombination == None) or (
+                len(combination) < len(shortestCombination)
+            ):
                 shortestCombination = combination
 
     memo[key] = shortestCombination
