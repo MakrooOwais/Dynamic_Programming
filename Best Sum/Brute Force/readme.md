@@ -1,4 +1,4 @@
-# The bestSum Problem (Brute Force)
+# The bestSum - Recursive Approach
 
 The `bestSum` function is a Python implementation of a recursive algorithm to find the smallest set of numbers from an array (`numbers`) that adds up to a given target sum (`targetSum`). This problem falls under the category of dynamic programming and is often referred to as the "Best Sum" problem.
 
@@ -13,12 +13,12 @@ The function returns the smallest set of numbers from the `numbers` array that a
 
 ## Algorithm
 
-The `bestSum` function employs a recursive approach to solve the problem. It iterates through each number in the numbers array and tries to find the best combination that leads to the target sum. The algorithm works as follows:
+The `bestSum` function employs a recursive approach to solve the problem. It iterates through each number in the `numbers` array and tries to find the best combination that leads to the target sum. The algorithm works as follows:
 
 1. Base cases:
 
-    - If the targetSum is 0, it means we have found a valid combination that adds up to the target sum. In this case, an empty list `[]` is returned.
-    - If the targetSum becomes negative, it indicates that the current combination is not valid, so `None` is returned.
+    - If the `targetSum` is 0, it means we have found a valid combination that adds up to the target sum. In this case, an empty list `[]` is returned.
+    - If the `targetSum` becomes negative, it indicates that the current combination is not valid, so `None` is returned.
 
 2. For each number in the `numbers` array, calculate the `remainder` by subtracting the number from the `targetSum`.
 
@@ -32,7 +32,7 @@ The `bestSum` function employs a recursive approach to solve the problem. It ite
 
 ## Usage
 
-To use the `bestSum` function, provide the targetSum and the numbers array as inputs. For example:
+To use the `bestSum` function, provide the `targetSum` and the `numbers` array as inputs. For example:
 
 ```python
 inputs = [(7, [2, 3]), (7, [2, 4]), (7, [5, 3, 4, 7]), (8, [2, 3, 5]), (300, [7, 15])]
@@ -44,10 +44,12 @@ for input in inputs:
 
 ## Performance
 
-It is important to note that the bestSum function uses a recursive approach, which may lead to exponential time complexity for certain inputs. As the size of the numbers array or the targetSum increases, the execution time may become significant.
+It is important to note that the `bestSum` function uses a recursive approach, which may lead to exponential time complexity for certain inputs. As the size of the `numbers` array or the `targetSum` increases, the execution time may become significant.
 
 For larger inputs, it is recommended to optimize the function using memoization or a dynamic programming approach to avoid redundant calculations and improve overall performance.
 
-In the provided code, the execution time is measured using the time module and printed in milliseconds (ms) for each input set.
+In the provided code, the execution time is measured using the `time` module and printed in milliseconds (ms) for each input set.
 
-By understanding the bestSum function's algorithm and usage, you can find the smallest set of numbers from the numbers array that adds up to the targetSum. The recursive nature of the algorithm allows it to explore different combinations efficiently, but for larger inputs, additional optimization techniques may be necessary for better performance.
+---
+
+By understanding the `bestSum` function's algorithm and usage, you can find the smallest set of numbers from the `numbers` array that adds up to the `targetSum`. The recursive nature of the algorithm allows it to explore different combinations efficiently, but for larger inputs, additional optimization techniques may be necessary for better performance.

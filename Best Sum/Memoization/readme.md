@@ -1,4 +1,4 @@
-# bestSum with Memoization
+# The bestSum Problem with Memoization - Optimized Approach
 
 The `bestSum` function is an improved version of the previous Python implementation, which uses memoization to optimize the solution. This technique significantly reduces the time complexity of the algorithm by avoiding redundant calculations and storing previously computed results.
 
@@ -10,7 +10,7 @@ Memoization is a dynamic programming technique that involves caching the results
 
 The `bestSum` function now takes an additional parameter:
 
-`memo`: A dictionary that serves as a memoization table to store previously computed results.
+1. `memo`: A dictionary that serves as a memoization table to store previously computed results.
 
 ## Memoization Process
 
@@ -41,5 +41,7 @@ for input in inputs:
 ## Performance
 
 The memoized version of the `bestSum` function significantly reduces the time complexity for larger inputs. With the help of memoization, the function efficiently stores and reuses intermediate results, leading to faster computation times.
+
+---
 
 By utilizing memoization, the `bestSum` function offers a more efficient solution to finding the smallest set of numbers from the `numbers` array that adds up to the `targetSum`. The memoization technique helps reduce redundant calculations, leading to improved performance, especially for larger inputs.
