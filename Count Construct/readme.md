@@ -1,16 +1,16 @@
 # The countConstruct Problem
 
-Write a function `howConstruct(targetSum, wordBank)` that takes in a target string and an array of strings as arguments.
+Write a function `countConstruct(targetSum, wordBank)` that takes in a target string and an array of strings as arguments.
 
 The function should return the number of ways that the `target` can be constructed by concatenating elements of `wordBank` array. If there is no combination that adds up to the targetSum, then return None.
 
 You may use an element of the array as many times as needed.
 
 ```text
-howConstruct('', [...]) = 1
+countConstruct('', [...]) = 1
 ```
 
-Given `targetSum` and `wordBank`, calculate `howConstruct(target, wordBank)`.
+Given `targetSum` and `wordBank`, calculate `countConstruct(target, wordBank)`.
 
 ## Examples
 
