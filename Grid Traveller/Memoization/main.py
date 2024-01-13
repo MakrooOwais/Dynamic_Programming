@@ -9,7 +9,7 @@ def gridTraveller(m: int, n: int, memo: dict = {}) -> int:
     if m == 0 or n == 0:
         return 0
 
-    memo[(m, n)] = gridTraveller(m - 1, n) + gridTraveller(m, n - 1)
+    memo[(m, n)] = gridTraveller(m - 1, n, memo) + gridTraveller(m, n - 1. memo)
     return memo[(m, n)]
 
 
